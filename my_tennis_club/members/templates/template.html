@@ -1,0 +1,28 @@
+
+{% for x in fruits %}
+ <h2>
+ <li   {% if forloop.first %}
+        style='background-color:lightblue;'
+      {% endif %}>
+    {{ forloop.counter }} {{ x }} </li>
+  
+
+  </h2>
+{% endfor %}
+
+<p>In views.py you can see what the fruits variable looks like.</p>
+
+<table border='1'>
+  <tr>
+    <th>ID</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+  </tr>
+{% for x in mymembers %}
+    <tr>
+      <td>{{ x.id }}</td>
+        <td>{{ x.firstname }}</td>
+      <td>{{ x.lastname }}</td>
+    </tr>
+{% endfor %}
+</table>
